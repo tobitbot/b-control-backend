@@ -1,0 +1,12 @@
+[Unit]
+Description=Beamer control backend
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+ExecStart=...
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
