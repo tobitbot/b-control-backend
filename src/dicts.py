@@ -1,7 +1,7 @@
 from enum import Enum
 
-# Dictonary to define all api to rs232 commands
-commands = {
+# Dictonary to define all api commands to rs232 commands
+Commands = {
   "autosource": {
     "val": "(ASC?)",
     "on": "(ASC1!)",
@@ -34,16 +34,19 @@ commands = {
   },
   "maxlamphours": {
     "val": "(LIF?)",
+  },
+  "brightness": {
+    "val": "(BRT?)",
+    "up": "(BRT+!)",
+    "down": "(BRT-!)",
+    "full": "(BRT100!)"
   }
 }
 
-
-# Video sources
-Sources = Enum("Sources", ["Computer 1", "Computer 2", "S-VIDEO"])
-
-class Sources:
-  Computer_1 = 1
-  Computer_2 = 2
-  HDMI = 4
-  Video = 11
-  S_Video = 12
+VideoSources = {
+  1: "Computer 1",
+  2: "Computer 2",
+  4: "HDMI",
+  11: "Video",
+  12: "S-Video"
+}

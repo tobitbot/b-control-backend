@@ -25,7 +25,7 @@ class SerialStub:
 
     def read(self, size):
         print("Serial:: read()")
-        return b'Stub Response\r\n'
+        return b'(0-1, 1)' #\r\n #(5000)
 
     def read_line(self):
         print("Serial:: read_line()")
